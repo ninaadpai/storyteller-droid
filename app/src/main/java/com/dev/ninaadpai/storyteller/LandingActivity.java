@@ -15,7 +15,7 @@ public class LandingActivity extends AppCompatActivity{
     Button signUpButton;
     Typeface greatVibes;
     public static Typeface roboto;
-    Animation fadeIn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,13 +26,10 @@ public class LandingActivity extends AppCompatActivity{
         signUpButton = (Button) findViewById(R.id.signUpButton);
         greatVibes = Typeface.createFromAsset(getAssets(), "fonts/GreatVibes-Regular.ttf");
         roboto = Typeface.createFromAsset(getAssets(), "fonts/RobotoCondensed-Bold.ttf");
-        fadeIn= AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
         appTitle.setTypeface(greatVibes);
         subTitle.setTypeface(roboto);
         signUpButton.setTypeface(roboto);
         alreadyMember.setTypeface(roboto);
-        appTitle.setAnimation(fadeIn);
-        subTitle.setAnimation(fadeIn);
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

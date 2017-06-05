@@ -11,4 +11,5 @@
     <dimen name="toolbar_icon_left_one">20dp</dimen>
     <dimen name="toolbar_icon_left_two">25dp</dimen>
     <dimen name="all_stories_carousel">55dp</dimen>
+    <dimen name="all_stories_carousel_text">12sp</dimen>
 </resources>

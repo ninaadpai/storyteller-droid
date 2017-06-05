@@ -4,6 +4,7 @@ package com.dev.ninaadpai.storyteller.fragments;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,21 @@ public class AllStoriesFragment extends Fragment {
         completed = (TextView)view.findViewById(R.id.completed);
         onGoing.setTypeface(LandingActivity.roboto);
         completed.setTypeface(LandingActivity.roboto);
+        onGoing.setText(Html.fromHtml("<u>Ongoing</u>"));
+        onGoing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onGoing.setText(Html.fromHtml("<u>Ongoing</u>"));
+                completed.setText(R.string.completed);
+            }
+        });
+        completed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                completed.setText(Html.fromHtml("<u>Completed</u>"));
+                onGoing.setText(R.string.on_going);
+            }
+        });
         return view;
     }
 }

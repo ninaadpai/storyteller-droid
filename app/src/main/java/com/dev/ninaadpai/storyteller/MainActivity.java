@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Typeface greatVibes;
     FrameLayout content;
     FragmentManager fragmentManager;
-    Animation slideUp, slideDown;
+    Animation slideUp, slideDown, fadeIn;
     RelativeLayout topToolbar, bottomToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +30,17 @@ public class MainActivity extends AppCompatActivity {
         topToolbar = (RelativeLayout) findViewById(R.id.topToolbar);
         bottomToolbar = (RelativeLayout) findViewById(R.id.bottomToolbar);
         mainActivityTitle = (TextView) findViewById(R.id.mainActivityTitle);
+        fadeIn= AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
         slideDown= AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
         slideUp= AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
+        content = (FrameLayout) findViewById(R.id.content);
+        content.startAnimation(fadeIn);
         topToolbar.startAnimation(slideDown);
         bottomToolbar.startAnimation(slideUp);
         greatVibes = Typeface.createFromAsset(getAssets(), "fonts/GreatVibes-Regular.ttf");
         mainActivityTitle.setTypeface(greatVibes);
-        content = (FrameLayout) findViewById(R.id.content);
         fragmentManager = getSupportFragmentManager();
+
         fragmentManager.beginTransaction().replace(R.id.content, new AllStoriesFragment(), "Home").commit();
         findViewById(R.id.all).setOnClickListener(new View.OnClickListener() {
             @Override
