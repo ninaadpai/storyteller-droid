@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Storyteller</string>
+    <string name="sub_title">TALES\nFOR ALL</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_member">Already a member? Log In</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all_stories">Stories Worldwide</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="for_you">For You</string>
+    <string name="profile">Profile</string>
+    <string name="on_going">Ongoing</string>
+    <string name="completed">Completed</string>
+</resources>

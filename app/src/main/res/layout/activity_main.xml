@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.dev.ninaadpai.storyteller.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black"
+        android:id="@+id/topToolbar">
+
+        <TextView
+            android:id="@+id/mainActivityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/main_title_text_size"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/content"
+        android:background="@android:color/white"
+        android:layout_below="@+id/topToolbar"
+        android:layout_above="@+id/bottomToolbar">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_toolbar_height"
+        android:background="@android:color/black"
+        android:id="@+id/bottomToolbar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/all"
+            android:layout_width="@dimen/main_nav_icon_size"
+            android:layout_height="@dimen/main_nav_icon_size"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/for_you"
+            android:layout_marginLeft="@dimen/toolbar_icon_left_two"
+            android:layout_marginStart="@dimen/toolbar_icon_left_two"
+            app:srcCompat="@drawable/all"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/for_you"
+            android:layout_width="@dimen/main_nav_icon_size"
+            android:layout_height="@dimen/main_nav_icon_size"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/toolbar_icon_left_one"
+            android:layout_marginRight="@dimen/toolbar_icon_left_one"
+            android:layout_toLeftOf="@+id/new_story"
+            android:layout_toStartOf="@+id/new_story"
+            app:srcCompat="@drawable/for_you"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/new_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/new_story"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/bookmarks"
+            android:layout_width="@dimen/main_nav_icon_size"
+            android:layout_height="@dimen/main_nav_icon_size"
+            android:layout_alignTop="@+id/for_you"
+            android:layout_marginLeft="@dimen/toolbar_icon_left_one"
+            android:layout_marginStart="@dimen/toolbar_icon_left_one"
+            android:layout_toEndOf="@+id/new_story"
+            android:layout_toRightOf="@+id/new_story"
+            app:srcCompat="@drawable/bookmark"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="@dimen/main_nav_icon_size"
+            android:layout_height="@dimen/main_nav_icon_size"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/bookmarks"
+            android:layout_marginEnd="@dimen/toolbar_icon_left_two"
+            android:layout_marginRight="@dimen/toolbar_icon_left_two"
+            app:srcCompat="@drawable/profile"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
