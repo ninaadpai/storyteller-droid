@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/creatorImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        app:srcCompat="@mipmap/ic_launcher_round"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/storyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@android:color/black"
+        android:layout_toEndOf="@+id/creatorImage"
+        android:layout_toRightOf="@+id/creatorImage" />
+
+    <TextView
+        android:id="@+id/ownerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/storyTitle"
+        android:layout_alignStart="@+id/storyTitle"
+        android:layout_below="@+id/storyTitle"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/startDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ownerName"
+        android:layout_alignStart="@+id/ownerName"
+        android:layout_below="@+id/ownerName"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/hashTags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/startDate"
+        android:layout_alignStart="@+id/startDate"
+        android:layout_below="@+id/startDate"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/numOfAuthors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/hashTags"
+        android:layout_alignStart="@+id/hashTags"
+        android:layout_below="@+id/hashTags"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@android:color/black"/>
+
+    <ImageView
+        android:id="@+id/bookmarkButton"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/storyTitle"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/bookmark_empty" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/numOfAuthors"/>
+</RelativeLayout>

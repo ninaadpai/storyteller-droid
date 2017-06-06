@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "136780471577",
+    "firebase_url": "https://storyteller-1873d.firebaseio.com",
+    "project_id": "storyteller-1873d",
+    "storage_bucket": "storyteller-1873d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136780471577:android:4201582d41c502cb",
+        "android_client_info": {
+          "package_name": "com.dev.ninaadpai.storyteller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136780471577-8m61ahgubq39uad5apleacbbm9mpma0s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dev.ninaadpai.storyteller",
+            "certificate_hash": "801bc53d142392a5756ecb6a22041796da9737a6"
+          }
+        },
+        {
+          "client_id": "136780471577-ogdli9ieb89mjh8clstc0hm7t6uf2i99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAIXd_jxyvzSMzSWAqv7lyO9OihKCUoUo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136780471577-ogdli9ieb89mjh8clstc0hm7t6uf2i99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
