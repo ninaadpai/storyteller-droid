@@ -52,7 +52,7 @@ public class AllStoriesFragment extends Fragment {
         onGoingStoriesList = new ArrayList<>();
         addStoryItems();
         addNativeAdItems();
-        storyRecyclerAdapter = new StoryRecyclerAdapter(getContext(), onGoingStoriesList, 1);
+        storyRecyclerAdapter = new StoryRecyclerAdapter(getContext(), onGoingStoriesList, 0);
         storyRecycler.setAdapter(storyRecyclerAdapter);
         onGoing.setTypeface(LandingActivity.roboto);
         completed.setTypeface(LandingActivity.roboto);
@@ -62,6 +62,8 @@ public class AllStoriesFragment extends Fragment {
             public void onClick(View v) {
                 onGoing.setText(Html.fromHtml("<u>Ongoing</u>"));
                 completed.setText(R.string.completed);
+                storyRecyclerAdapter = new StoryRecyclerAdapter(getContext(), onGoingStoriesList, 0);
+                storyRecycler.setAdapter(storyRecyclerAdapter);
             }
         });
         completed.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +71,8 @@ public class AllStoriesFragment extends Fragment {
             public void onClick(View v) {
                 completed.setText(Html.fromHtml("<u>Completed</u>"));
                 onGoing.setText(R.string.on_going);
+                storyRecyclerAdapter = new StoryRecyclerAdapter(getContext(), onGoingStoriesList, 1);
+                storyRecycler.setAdapter(storyRecyclerAdapter);
             }
         });
         return view;
@@ -98,132 +102,8 @@ public class AllStoriesFragment extends Fragment {
     }
 
     private void addStoryItems() {
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-        onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
-
+        for(int i=0; i<60; i++) {
+            onGoingStoriesList.add(new Story("","Ninaad Pai","One day in the valley", "Jun 5th, 2017", "#new #letssee #politics #agenda", "14", 1));
+        }
     }
 }

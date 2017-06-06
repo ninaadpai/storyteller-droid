@@ -6,7 +6,7 @@
     <dimen name="sub_title_text_size">24sp</dimen>
     <dimen name="std_text_size">12sp</dimen>
     <dimen name="main_toolbar_height">40dp</dimen>
-    <dimen name="main_title_text_size">20sp</dimen>
+    <dimen name="main_title_text_size">24sp</dimen>
     <dimen name="main_nav_icon_size">28dp</dimen>
     <dimen name="toolbar_icon_left_one">20dp</dimen>
     <dimen name="toolbar_icon_left_two">25dp</dimen>

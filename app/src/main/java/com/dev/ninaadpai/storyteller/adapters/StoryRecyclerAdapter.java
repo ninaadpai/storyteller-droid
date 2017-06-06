@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.dev.ninaadpai.storyteller.LandingActivity;
 import com.dev.ninaadpai.storyteller.R;
+import com.dev.ninaadpai.storyteller.pojo.Story;
 import com.google.android.gms.ads.NativeExpressAdView;
 
 import java.util.List;
@@ -24,13 +26,31 @@ public class StoryRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
     private static final int AD_ITEM = 1;
     private final Context mContext;
     private final List<Object> mRecyclerViewItems;
-    private int flag = 0;
+    private int flag;
     public StoryRecyclerAdapter(Context mContext, List<Object> mRecyclerViewItems, int flag) {
         this.mContext = mContext;
         this.mRecyclerViewItems = mRecyclerViewItems;
         this.flag = flag;
     }
-
+    public class MenuItemViewHolder extends RecyclerView.ViewHolder {
+        private ImageView creatorImage, bookmarkButton;
+        private TextView storyTitle, ownerName, startDate, hashTags, numOfAuthors;
+        public MenuItemViewHolder(View itemView) {
+            super(itemView);
+            creatorImage = (ImageView)itemView.findViewById(R.id.creatorImage);
+            bookmarkButton = (ImageView)itemView.findViewById(R.id.bookmarkButton);
+            storyTitle = (TextView)itemView.findViewById(R.id.storyTitle);
+            ownerName = (TextView)itemView.findViewById(R.id.ownerName);
+            startDate = (TextView)itemView.findViewById(R.id.startDate);
+            hashTags = (TextView)itemView.findViewById(R.id.hashTags);
+            numOfAuthors = (TextView)itemView.findViewById(R.id.numOfAuthors);
+        }
+    }
+    public class NativeAdViewHolder extends  RecyclerView.ViewHolder {
+        public NativeAdViewHolder(View itemView) {
+            super(itemView);
+        }
+    }
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         switch (viewType) {
@@ -53,12 +73,21 @@ public class StoryRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
             case MENU_ITEM:
                 default:
                     MenuItemViewHolder menuItemHolder = (MenuItemViewHolder) holder;
-//                    MenuItem menuItem = (MenuItem) mRecyclerViewItems.get(position);
-                    menuItemHolder.storyTitle.setText("Blah");
-                    menuItemHolder.ownerName.setText("Blah");
-                    menuItemHolder.startDate.setText("Blah");
-                    menuItemHolder.hashTags.setText("Blah");
-                    menuItemHolder.numOfAuthors.setText("Blah");
+                    if(flag == 1)
+                        menuItemHolder.bookmarkButton.setVisibility(View.GONE);
+                    else
+                        menuItemHolder.bookmarkButton.setVisibility(View.VISIBLE);
+                    //Story storyItem = (Story) mRecyclerViewItems.get(position);
+                    menuItemHolder.storyTitle.setText("Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blahI ");
+                    menuItemHolder.storyTitle.setTypeface(LandingActivity.roboto);
+                    menuItemHolder.ownerName.setText("Blah blah blah");
+                    menuItemHolder.ownerName.setTypeface(LandingActivity.roboto);
+                    menuItemHolder.startDate.setText("Blah blah blah");
+                    menuItemHolder.startDate.setTypeface(LandingActivity.roboto);
+                    menuItemHolder.hashTags.setText("Blah blah blah");
+                    menuItemHolder.hashTags.setTypeface(LandingActivity.roboto);
+                    menuItemHolder.numOfAuthors.setText("Blah blah blah");
+                    menuItemHolder.numOfAuthors.setTypeface(LandingActivity.roboto);
                     break;
             case AD_ITEM:
                 NativeAdViewHolder nativeExpressHolder = (NativeAdViewHolder) holder;
@@ -67,6 +96,9 @@ public class StoryRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
                 adCardView.removeAllViews();
                 if(adView.getParent() != null) {
                     ((ViewGroup)adView.getParent()).removeView(adView);
+                }
+                if(adCardView.getChildCount() > 0) {
+                    adCardView.removeAllViews();
                 }
                 adCardView.addView(adView);
                 break;
@@ -84,24 +116,6 @@ public class StoryRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
         return mRecyclerViewItems.size();
     }
 
-    public class MenuItemViewHolder extends RecyclerView.ViewHolder {
-        private ImageView creatorImage, bookmarkButton;
-        private TextView storyTitle, ownerName, startDate, hashTags, numOfAuthors;
-        public MenuItemViewHolder(View itemView) {
-            super(itemView);
-            creatorImage = (ImageView)itemView.findViewById(R.id.creatorImage);
-            bookmarkButton = (ImageView)itemView.findViewById(R.id.bookmarkButton);
-            storyTitle = (TextView)itemView.findViewById(R.id.storyTitle);
-            ownerName = (TextView)itemView.findViewById(R.id.ownerName);
-            startDate = (TextView)itemView.findViewById(R.id.startDate);
-            hashTags = (TextView)itemView.findViewById(R.id.hashTags);
-            numOfAuthors = (TextView)itemView.findViewById(R.id.numOfAuthors);
-        }
-    }
-    public class NativeAdViewHolder extends  RecyclerView.ViewHolder {
-        public NativeAdViewHolder(View itemView) {
-            super(itemView);
-        }
-    }
+
 }
 

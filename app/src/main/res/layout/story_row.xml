@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/storyTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="5dp"
@@ -27,8 +27,11 @@
         android:layout_marginTop="5dp"
         android:maxLines="1"
         android:ellipsize="end"
+        android:text="text"
         android:textColor="@android:color/black"
         android:layout_toEndOf="@+id/creatorImage"
+        android:layout_toLeftOf="@+id/bookmarkButton"
+        android:layout_toStartOf="@+id/bookmarkButton"
         android:layout_toRightOf="@+id/creatorImage" />
 
     <TextView

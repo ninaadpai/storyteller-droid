@@ -13,8 +13,7 @@ import android.widget.TextView;
 public class LandingActivity extends AppCompatActivity{
     TextView appTitle, subTitle, alreadyMember;
     Button signUpButton;
-    Typeface greatVibes;
-    public static Typeface roboto;
+    public static Typeface greatVibes,roboto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -18,7 +18,6 @@ import com.dev.ninaadpai.storyteller.fragments.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
     TextView mainActivityTitle;
-    Typeface greatVibes;
     FrameLayout content;
     FragmentManager fragmentManager;
     Animation slideUp, slideDown, fadeIn;
@@ -37,8 +36,7 @@ public class MainActivity extends AppCompatActivity {
         content.startAnimation(fadeIn);
         topToolbar.startAnimation(slideDown);
         bottomToolbar.startAnimation(slideUp);
-        greatVibes = Typeface.createFromAsset(getAssets(), "fonts/GreatVibes-Regular.ttf");
-        mainActivityTitle.setTypeface(greatVibes);
+        mainActivityTitle.setTypeface(LandingActivity.greatVibes);
         fragmentManager = getSupportFragmentManager();
 
         fragmentManager.beginTransaction().replace(R.id.content, new AllStoriesFragment(), "Home").commit();
